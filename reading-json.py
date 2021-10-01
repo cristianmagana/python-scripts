@@ -34,3 +34,34 @@ with open('data.txt') as json_file:
         print('From: ' + p['from'])
         print('')
 
+############################# NESTED JSON ###########
+#"bills": [
+#{
+#  "url": "http:\/\/maplight.org\/us-congress\/bill\/110-hr-195\/233677",
+
+#  "organizations": [
+#    {
+#      "organization_id": "22973",
+#      "name": "National Health Federation",
+#    },
+#    {
+#      "organization_id": "27059",
+#      "name": "A Christian Perspective on Health Issues",
+#    },
+#    {
+#      "organization_id": "27351",
+#      "name": "Natural Health Roundtable",
+#    }
+#  ]
+#}
+
+for bill in data['bills']:
+    for organization in bill['organizations']:
+        print (organization.get('name'))
+
+# OR
+
+for i in data['bills']['organizations']:
+    print(organization.get('name'))
+
+
