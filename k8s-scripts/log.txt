@@ -1,0 +1,3 @@
+aws-node-s44m5 controller-revision-hash=ff9745db6,k8s-app=aws-node,pod-template-generation=1
+kube-proxy-rbw8c controller-revision-hash=679dd5bcff,k8s-app=kube-proxy,pod-template-generation=1
+newrelic-infra-qhpcm controller-revision-hash=6d9875f457,name=newrelic-infra,pod-template-generation=1
