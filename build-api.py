@@ -23,7 +23,6 @@ books = [
      'published': '1989'}
 ]
 
-
 @app.route('/', methods=['GET'])
 def home():
     return '''<h1>Cozy Coffee Book Club</h1>
@@ -34,5 +33,33 @@ def home():
 @app.route('/api/v1/resources/books/all', methods=['GET'])
 def api_all():
     return jsonify(books)
+
+@app.route('/api.v/1/users/<user_id>', methods = ['GET', 'POST', 'DELETE'])
+def user(user_id):
+    if request.method == 'GET':
+        """return the information for <user_id>"""
+        .
+        .
+        .
+    if request.method == 'POST':
+        """modify/update the information for <user_id>"""
+        # you can use <user_id>, which is a str but could
+        # changed to be int or whatever you want, along
+        # with your lxml knowledge to make the required
+        # changes
+        print(request.body)
+        .
+        .
+        .
+    if request.method == 'DELETE':
+        """delete user with ID <user_id>"""
+        .
+        .
+        .
+    else:
+        # POST Error 405 Method Not Allowed
+        .
+        .
+        .  
 
 app.run()
