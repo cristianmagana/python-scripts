@@ -77,13 +77,7 @@ print(cache.get(1))  # "one"
 
 time.sleep(6)
 print(cache.get(1))  # -1 (expired)
-```
 
----
-
-## Visual Example - How LFU Works
-```
-Initial state: capacity=2, cache is empty
 freq_to_keys = {}
 
 put(1, "A"):
